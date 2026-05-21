@@ -33,8 +33,7 @@ SELECT nome, curso FROM alunos;
 SELECT * FROM disciplinas WHERE carga_horaria > 60;
 
 UPDATE alunos 
-SET curso = 'Engenharia de Software
-' 
+SET curso = 'Engenharia de Software' 
 WHERE nome = 'Franco Tales';
 
 UPDATE disciplinas
