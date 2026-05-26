@@ -1,0 +1,56 @@
+Disciplina: Manipulação de Dados / Banco de Dados II
+Professor: Aguinaldo Neto
+
+Atividade 03 – Consultas Avançadas com Duas Tabelas
+1 - Crie uma tabela chamada Funcionarios com as seguintes colunas:
+• Id (INT, chave primária, autoincremento)
+• Nome (VARCHAR(50))
+• Cargo (VARCHAR(50))
+• Salario (DECIMAL(10,2))
+
+Insira os seguintes registros na tabela:
+Nome Cargo Salario
+Jon Snow Desenvolvedor 4500.00
+Daenerys Targaryen Analista 3800.00
+Arya Stark Desenvolvedor 4800.00
+Tyrion Lannister DBA 5200.00
+Euron Greyjoy Suporte 3100.00
+
+2 - Crie outra tabela chamada Projetos com as seguintes colunas:
+• Id (INT, chave primária, autoincremento)
+• NomeProjeto (VARCHAR(100))
+• Responsavel (VARCHAR(50))
+NomeProjeto Responsavel
+Site Institucional Jon Snow
+App Mobile Daenerys Targaryen
+ERP Interno Arya Stark
+Dashboard BI Varys
+
+3 - Escreva uma consulta que retorne todos os nomes dos funcionários da tabela
+Funcionarios e todos os responsáveis da tabela Projetos. Permita nomes duplicados no
+resultado.
+Dica: Use UNION ALL
+
+4 - Agora escreva uma nova consulta que retorne apenas os nomes distintos entre
+funcionários e responsáveis de projetos (sem repetição).
+Dica: Use UNION (sem ALL) ou DISTINCT
+
+5 - Liste todos os funcionários cujo nome contenha a letra "a" (maiúscula ou
+minúscula), em qualquer parte do nome.
+Dica: Use LIKE com %
+
+6 - Liste os funcionários cujo salário esteja entre 4000.00 e 5000.00, inclusive.
+Dica: Use BETWEEN
+
+7 - Escreva uma consulta que traga o menor e o maior salário da tabela Funcionarios.
+Dica: Use MIN(Salario) e MAX(Salario)
+
+8 - Escreva uma consulta que retorne os 3 funcionários com os maiores salários.
+Dica: Use ORDER BY combinado com LIMIT.
+
+9 - Escreva uma consulta que agrupe os funcionários por cargo e mostre:
+O nome do cargo
+A quantidade de funcionários em cada cargo (COUNT)
+A média salarial de cada grupo (AVG)
+Filtre para mostrar apenas os cargos com média salarial superior a 4000.00.
+Dica: Use GROUP BY e HAVING
