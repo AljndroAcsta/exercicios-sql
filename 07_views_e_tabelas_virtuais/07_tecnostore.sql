@@ -61,6 +61,7 @@ create view vw_clientes_SP as
 select id_cliente, nome, cidade
 from clientes
 where estado = 'SP';
+select * from vw_clientes_SP;
 
 create view vw_vendas_resumo AS
 select
@@ -71,6 +72,7 @@ from clientes c
 inner join pedidos ped on c.id_cliente = ped.id_cliente
 inner join itens_pedido i on ped.id_pedido = i.id_pedido
 inner join produtos p on i.id_produto = p.id_produto;
+select * from vw_vendas_resumo;
 
 create view vw_produtos_reduzidos AS
 select
@@ -78,6 +80,7 @@ select
     nome_produto AS 'produto',
     preco as 'preço'
 from produtos;
+select * from vw_produtos_reduzidos;
 
 create view vw_top_vendas AS
 select
@@ -86,8 +89,6 @@ select
 from vw_vendas_resumo
 group by nome_produto
 having sum(quantidade) > 50;
-
-select * from vw_top_vendas
-order by nome_produto;
+select * from vw_top_vendas order by nome_produto;
 
 --não é possível atualizar diretamente a view
